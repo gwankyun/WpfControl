@@ -1,0 +1,122 @@
+﻿<Window x:Class="WpfControl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfControl"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl TabStripPlacement="Left" Name="tabControl">
+            <TabItem Header="TabControl">
+                <GroupBox>
+                    <StackPanel>
+                        <RadioButton Name="left" Checked="left_Checked">Left</RadioButton>
+                        <RadioButton Name="top" Checked="top_Checked">Top</RadioButton>
+                        <RadioButton Name="right" Checked="right_Checked">Right</RadioButton>
+                        <RadioButton Name="bottom" Checked="bottom_Checked">Bottom</RadioButton>
+                    </StackPanel>
+                </GroupBox>
+            </TabItem>
+            <TabItem Header="Button">
+                <StackPanel>
+                    <Button>Button</Button>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="ToggleButton">
+                <StackPanel>
+                    <ToggleButton>ToggleButton</ToggleButton>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="RepeatButton">
+                <StackPanel>
+                    <RepeatButton>RepeatButton</RepeatButton>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="CheckBox">
+                <StackPanel>
+                    <CheckBox>CheckBox</CheckBox>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="RadioButton">
+                <GroupBox>
+                    <StackPanel>
+                        <RadioButton>1</RadioButton>
+                        <RadioButton>2</RadioButton>
+                        <RadioButton>3</RadioButton>
+                    </StackPanel>
+                </GroupBox>
+            </TabItem>
+            <TabItem Header="ScrollViewer">
+                <ScrollViewer>
+                    <StackPanel>
+                        <Button Height="50">Button</Button>
+                        <Button Height="50">Button</Button>
+                        <Button Height="50">Button</Button>
+                        <Button Height="50">Button</Button>
+                        <Button Height="50">Button</Button>
+                        <Button Height="50">Button</Button>
+                        <Button Height="50">Button</Button>
+                        <Button Height="50">Button</Button>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="GroupBox">
+                <GroupBox Header="GroupBox">
+                </GroupBox>
+            </TabItem>
+            <TabItem Header="Label">
+                <StackPanel>
+                    <Expander Header="Expander">
+                        <Label>Label</Label>
+                    </Expander>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="TextBox">
+                <TextBox></TextBox>
+            </TabItem>
+            <TabItem Header="RichTextBox">
+                <RichTextBox></RichTextBox>
+            </TabItem>
+            <TabItem Header="PasswordBox">
+                <PasswordBox></PasswordBox>
+            </TabItem>
+            <TabItem Header="ListBox">
+                <ListBox>
+                    <ListBoxItem>1</ListBoxItem>
+                    <ListBoxItem>2</ListBoxItem>
+                    <ListBoxItem>3</ListBoxItem>
+                    <ListBoxItem>4</ListBoxItem>
+                </ListBox>
+            </TabItem>
+            <TabItem Header="ComboBox">
+                <StackPanel>
+                    <ComboBox>
+                        <ComboBoxItem>1</ComboBoxItem>
+                        <ComboBoxItem>2</ComboBoxItem>
+                        <ComboBoxItem>3</ComboBoxItem>
+                        <ComboBoxItem>4</ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Slider">
+                <StackPanel>
+                    <Slider Name="slider"
+                            Minimum="0" Maximum="100" Value="50"
+                            TickFrequency="1"
+                            IsSnapToTickEnabled="True"></Slider>
+                    <TextBox Text="{Binding ElementName=slider, Path=Value}"></TextBox>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="ProgressBar">
+                <ProgressBar IsIndeterminate="True"></ProgressBar>
+            </TabItem>
+            <TabItem Header="Calender">
+                <Calendar></Calendar>
+            </TabItem>
+            <TabItem Header="DatePicker">
+                <DatePicker></DatePicker>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
