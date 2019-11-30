@@ -57,5 +57,15 @@ namespace WpfControl
                 buttonLabel.Content = count.ToString();
             }
         }
+
+        private void toggleButton_Click(object sender, RoutedEventArgs e)
+        {
+            int count = 0;
+            if (int.TryParse((string)toggleButtonLabel.Content, out count))
+            {
+                count += 1;
+                toggleButtonLabel.Content = count.ToString();
+            }
+        }
     }
 }
