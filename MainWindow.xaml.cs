@@ -50,8 +50,12 @@ namespace WpfControl
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            int count = Convert.ToInt32((string)buttonLabel.Content) + 1;
-            buttonLabel.Content = count.ToString();
+            int count = 0;
+            if (int.TryParse((string)buttonLabel.Content, out count))
+            {
+                count += 1;
+                buttonLabel.Content = count.ToString();
+            }
         }
     }
 }
