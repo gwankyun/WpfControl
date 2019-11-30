@@ -48,7 +48,14 @@
             </TabItem>
             <TabItem Header="RepeatButton">
                 <StackPanel>
-                    <RepeatButton>RepeatButton</RepeatButton>
+                    <RepeatButton Name="repeatButton"
+                                  Click="repeatButton_Click">
+                        RepeatButton
+                    </RepeatButton>
+                    <StackPanel Orientation="Horizontal">
+                        <Label>Click: </Label>
+                        <Label Name="repeatButtonLabel">0</Label>
+                    </StackPanel>
                 </StackPanel>
             </TabItem>
             <TabItem Header="CheckBox">

@@ -67,5 +67,15 @@ namespace WpfControl
                 toggleButtonLabel.Content = count.ToString();
             }
         }
+
+        private void repeatButton_Click(object sender, RoutedEventArgs e)
+        {
+            int count = 0;
+            if (int.TryParse((string)repeatButtonLabel.Content, out count))
+            {
+                count += 1;
+                repeatButtonLabel.Content = count.ToString();
+            }
+        }
     }
 }
