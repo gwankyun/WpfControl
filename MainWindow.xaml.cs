@@ -27,7 +27,10 @@ namespace WpfControl
 
         private void left_Checked(object sender, RoutedEventArgs e)
         {
-            tabControl.TabStripPlacement = Dock.Left;
+            if (tabControl != null)
+            {
+                tabControl.TabStripPlacement = Dock.Left;
+            }
         }
 
         private void top_Checked(object sender, RoutedEventArgs e)

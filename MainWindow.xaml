@@ -7,17 +7,24 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TabControl TabStripPlacement="Left" Name="tabControl">
-            <TabItem Header="TabControl">
-                <GroupBox>
-                    <StackPanel>
-                        <RadioButton Name="left" Checked="left_Checked">Left</RadioButton>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="8*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid>
+            <GroupBox>
+                <StackPanel>
+                    <Label>TabStripPlacement:</Label>
+                    <StackPanel Orientation="Horizontal">
+                        <RadioButton Name="left" Checked="left_Checked" IsChecked="True">Left</RadioButton>
                         <RadioButton Name="top" Checked="top_Checked">Top</RadioButton>
                         <RadioButton Name="right" Checked="right_Checked">Right</RadioButton>
                         <RadioButton Name="bottom" Checked="bottom_Checked">Bottom</RadioButton>
                     </StackPanel>
-                </GroupBox>
-            </TabItem>
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+        <TabControl TabStripPlacement="Left" Name="tabControl" Grid.Row="1">
             <TabItem Header="Button">
                 <StackPanel>
                     <Button>Button</Button>
