@@ -27,7 +27,11 @@
         <TabControl TabStripPlacement="Left" Name="tabControl" Grid.Row="1">
             <TabItem Header="Button">
                 <StackPanel>
-                    <Button>Button</Button>
+                    <Button Name="button" Click="button_Click">Button</Button>
+                    <StackPanel Orientation="Horizontal">
+                        <Label>Click: </Label>
+                        <Label Name="buttonLabel">0</Label>
+                    </StackPanel>
                 </StackPanel>
             </TabItem>
             <TabItem Header="ToggleButton">

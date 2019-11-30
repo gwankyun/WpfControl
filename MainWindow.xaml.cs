@@ -47,5 +47,11 @@ namespace WpfControl
         {
             tabControl.TabStripPlacement = Dock.Bottom;
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            int count = int.Parse((string)buttonLabel.Content) + 1;
+            buttonLabel.Content = count.ToString();
+        }
     }
 }
